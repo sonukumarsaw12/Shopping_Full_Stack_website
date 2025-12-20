@@ -49,39 +49,40 @@ const HomeProductSection = ({ title, data, addToCartHandler, buyNowHandler, adde
                             <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-bold flex items-center gap-1 shadow-sm text-gray-900 group-hover:shadow-pink-200 transition-shadow">
                                 {product.rating} <Star size={10} className="fill-yellow-400 text-yellow-400" />
                             </div>
+                            {/* Discount Badge */}
+                            <div className="absolute top-3 right-3 bg-pink-600 text-white px-2 py-1 rounded-md text-[10px] font-bold shadow-sm z-10">
+                                40% OFF
+                            </div>
                         </div>
 
                         {/* Content */}
-                        <div className="p-4 flex flex-col flex-1">
-                            <h3 className="text-base font-bold text-gray-900 dark:text-white line-clamp-1 mb-1 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">{product.name}</h3>
-                            <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 tracking-wide uppercase">{product.brand || 'Cosmetic Shop'}</p>
+                        <div className="p-3 md:p-4 flex flex-col flex-1">
+                            <h3 className="text-sm md:text-base font-bold text-gray-900 dark:text-white line-clamp-1 mb-1 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">{product.name}</h3>
+                            <p className="text-[10px] md:text-xs text-gray-500 dark:text-gray-400 mb-2 md:mb-3 tracking-wide uppercase">{product.brand || 'Cosmetic Shop'}</p>
 
-                            <div className="mt-auto flex items-center justify-between mb-4">
+                            <div className="mt-auto flex items-end justify-between gap-2 mb-3 md:mb-4">
                                 <div className="flex flex-col">
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-lg font-bold text-gray-900 dark:text-white">₹{product.price}</span>
-                                        <span className="text-xs text-gray-400 dark:text-white/40 line-through">₹{Math.round(product.price * 1.4)}</span>
+                                    <div className="flex items-baseline gap-1.5">
+                                        <span className="text-base md:text-lg font-bold text-gray-900 dark:text-white">₹{product.price}</span>
+                                        <span className="text-[10px] md:text-xs text-gray-400 dark:text-white/40 line-through">₹{Math.round(product.price * 1.4)}</span>
                                     </div>
                                 </div>
-                                <span className="text-[10px] font-bold text-pink-600 bg-pink-50 dark:bg-pink-900/30 px-2 py-1 rounded-full uppercase tracking-wider group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50 transition-colors">
-                                    40% OFF
-                                </span>
                             </div>
 
                             {/* Action Buttons */}
-                            <div className="grid grid-cols-2 gap-3">
+                            <div className="grid grid-cols-2 gap-2 md:gap-3">
                                 <button
                                     onClick={(e) => addToCartHandler(e, product)}
-                                    className="bg-transparent border border-gray-200 dark:border-white/20 hover:border-pink-500 hover:text-pink-600 dark:hover:text-pink-400 text-gray-600 dark:text-gray-300 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 uppercase tracking-wide group/btn hover:bg-pink-50 dark:hover:bg-pink-900/10"
+                                    className="bg-transparent border border-gray-200 dark:border-white/20 hover:border-pink-500 hover:text-pink-600 dark:hover:text-pink-400 text-gray-600 dark:text-gray-300 py-2 md:py-2.5 rounded-lg text-[10px] md:text-xs font-bold transition-all flex items-center justify-center gap-1 md:gap-2 uppercase tracking-wide group/btn hover:bg-pink-50 dark:hover:bg-pink-900/10"
                                 >
-                                    {addedItems[product._id] ? <Check size={14} className="text-green-500" /> : <ShoppingBag size={14} className="group-hover/btn:scale-110 transition-transform" />}
+                                    {addedItems[product._id] ? <Check size={12} className="text-green-500" /> : <ShoppingBag size={12} className="md:w-[14px] md:h-[14px] group-hover/btn:scale-110 transition-transform" />}
                                     Add
                                 </button>
                                 <button
                                     onClick={(e) => buyNowHandler(e, product)}
-                                    className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 uppercase tracking-wide shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:scale-[1.02]"
+                                    className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-2 md:py-2.5 rounded-lg text-[10px] md:text-xs font-bold transition-all flex items-center justify-center gap-1 md:gap-2 uppercase tracking-wide shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:scale-[1.02]"
                                 >
-                                    <Zap size={14} className="fill-current" />
+                                    <Zap size={12} className="md:w-[14px] md:h-[14px] fill-current" />
                                     Buy
                                 </button>
                             </div>
@@ -279,28 +280,31 @@ const HomePage = () => {
                                                     <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-bold flex items-center gap-1 shadow-sm text-gray-900 group-hover:shadow-pink-200 transition-shadow">
                                                         {product.rating} <Star size={10} className="fill-yellow-400 text-yellow-400" />
                                                     </div>
+                                                    {/* Discount Badge */}
+                                                    <div className="absolute top-3 right-3 bg-pink-600 text-white px-2 py-1 rounded-md text-[10px] font-bold shadow-sm z-10">
+                                                        40% OFF
+                                                    </div>
                                                 </div>
                                                 {/* Content */}
-                                                <div className="p-4 flex flex-col flex-1">
-                                                    <h3 className="text-base font-bold text-gray-900 dark:text-white line-clamp-1 mb-1 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">{product.name}</h3>
-                                                    <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 tracking-wide uppercase">{product.brand || 'Cosmetic Shop'}</p>
+                                                <div className="p-3 md:p-4 flex flex-col flex-1">
+                                                    <h3 className="text-sm md:text-base font-bold text-gray-900 dark:text-white line-clamp-1 mb-1 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">{product.name}</h3>
+                                                    <p className="text-[10px] md:text-xs text-gray-500 dark:text-gray-400 mb-2 md:mb-3 tracking-wide uppercase">{product.brand || 'Cosmetic Shop'}</p>
 
-                                                    <div className="mt-auto flex items-center justify-between mb-4">
+                                                    <div className="mt-auto flex items-end justify-between gap-2 mb-3 md:mb-4">
                                                         <div className="flex flex-col">
-                                                            <div className="flex items-center gap-2">
-                                                                <span className="text-lg font-bold text-gray-900 dark:text-white">₹{product.price}</span>
-                                                                <span className="text-xs text-gray-400 dark:text-white/40 line-through">₹{Math.round(product.price * 1.4)}</span>
+                                                            <div className="flex items-baseline gap-1.5">
+                                                                <span className="text-base md:text-lg font-bold text-gray-900 dark:text-white">₹{product.price}</span>
+                                                                <span className="text-[10px] md:text-xs text-gray-400 dark:text-white/40 line-through">₹{Math.round(product.price * 1.4)}</span>
                                                             </div>
                                                         </div>
-                                                        <span className="text-[10px] font-bold text-pink-600 bg-pink-50 dark:bg-pink-900/30 px-2 py-1 rounded-full uppercase tracking-wider group-hover:bg-pink-100 dark:group-hover:bg-pink-900/50 transition-colors">40% OFF</span>
                                                     </div>
 
-                                                    <div className="grid grid-cols-2 gap-3">
-                                                        <button onClick={(e) => addToCartHandler(e, product)} className="bg-transparent border border-gray-200 dark:border-white/20 hover:border-pink-500 hover:text-pink-600 dark:hover:text-pink-400 text-gray-600 dark:text-gray-300 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 uppercase tracking-wide group/btn hover:bg-pink-50 dark:hover:bg-pink-900/10">
-                                                            {addedItems[product._id] ? <Check size={14} className="text-green-500" /> : <ShoppingBag size={14} className="group-hover/btn:scale-110 transition-transform" />} Add
+                                                    <div className="grid grid-cols-2 gap-2 md:gap-3">
+                                                        <button onClick={(e) => addToCartHandler(e, product)} className="bg-transparent border border-gray-200 dark:border-white/20 hover:border-pink-500 hover:text-pink-600 dark:hover:text-pink-400 text-gray-600 dark:text-gray-300 py-2 md:py-2.5 rounded-lg text-[10px] md:text-xs font-bold transition-all flex items-center justify-center gap-1 md:gap-2 uppercase tracking-wide group/btn hover:bg-pink-50 dark:hover:bg-pink-900/10">
+                                                            {addedItems[product._id] ? <Check size={12} className="text-green-500" /> : <ShoppingBag size={12} className="md:w-[14px] md:h-[14px] group-hover/btn:scale-110 transition-transform" />} Add
                                                         </button>
-                                                        <button onClick={(e) => buyNowHandler(e, product)} className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 uppercase tracking-wide shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:scale-[1.02]">
-                                                            <Zap size={14} className="fill-current" /> Buy
+                                                        <button onClick={(e) => buyNowHandler(e, product)} className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white py-2 md:py-2.5 rounded-lg text-[10px] md:text-xs font-bold transition-all flex items-center justify-center gap-1 md:gap-2 uppercase tracking-wide shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:scale-[1.02]">
+                                                            <Zap size={12} className="md:w-[14px] md:h-[14px] fill-current" /> Buy
                                                         </button>
                                                     </div>
                                                 </div>
