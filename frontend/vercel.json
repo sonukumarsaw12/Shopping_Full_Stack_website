@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://YOUR_BACKEND_URL_HERE/api/$1"
+      "destination": "https://shopping-full-stack-website.onrender.com/api/$1"
     },
     {
       "source": "/(.*)",
