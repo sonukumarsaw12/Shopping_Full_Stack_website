@@ -98,3 +98,20 @@ To destroy data:
 cd backend
 npm run data:destroy
 ```
+## Screenshot
+<img width="2856" height="1623" alt="image" src="https://github.com/user-attachments/assets/d8583861-a169-4681-b1d8-7190235dd588" />
+<img width="2879" height="1627" alt="image" src="https://github.com/user-attachments/assets/60c9d61a-ea07-4c06-b8be-fc6624b58d98" />
+<img width="2768" height="1610" alt="image" src="https://github.com/user-attachments/assets/04e27204-b7d6-498a-937f-16175d351010" />
+<img width="2848" height="1566" alt="image" src="https://github.com/user-attachments/assets/e1f51eab-297f-40c6-b415-577f1dcd262f" />
+<img width="2829" height="1517" alt="image" src="https://github.com/user-attachments/assets/b4ad534a-10d1-4f11-a453-02e8581f25a3" />
+<img width="2879" height="1619" alt="image" src="https://github.com/user-attachments/assets/69a7818f-d908-4d03-b95d-347f93eb617d" />
+<img width="2878" height="1625" alt="image" src="https://github.com/user-attachments/assets/7eeff71c-ce0c-4762-9cac-f1e0e09b7b8e" />
+<img width="2877" height="1620" alt="image" src="https://github.com/user-attachments/assets/a7235d79-82b5-428c-bef1-3b3345b43196" />
+<img width="2840" height="1618" alt="image" src="https://github.com/user-attachments/assets/b6b76728-cd8e-4e4a-98c3-87eb3121c751" />
+<img width="2871" height="1623" alt="image" src="https://github.com/user-attachments/assets/644560e1-848e-462a-978c-b61de74b3e5f" />
+<img width="2877" height="1617" alt="image" src="https://github.com/user-attachments/assets/90598f5b-b4d5-4b25-88bf-7b6126b466ef" />
+
+
+
+
+
